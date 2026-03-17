@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plannapp/features/schedule/schedule_screen.dart';
 import 'package:plannapp/features/splash/splash_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -552,7 +553,7 @@ class _HomeScreenState extends State<HomeScreen> {
             // Navigate to ScheduleScreen
             Navigator.pushReplacement(
               context,
-              MaterialPageRoute(builder: (context) => const HomeScreen()),
+              MaterialPageRoute(builder: (context) => const ScheduleScreen()),
             );
           } else if (index == 2) {
             // Navigate to AssignmentsScreen
