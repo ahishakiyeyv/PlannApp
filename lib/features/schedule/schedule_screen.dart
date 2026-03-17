@@ -16,13 +16,16 @@ class ScheduleScreen extends StatelessWidget {
          actions: [
           IconButton(onPressed: (){print('clicked on settings');}, icon: Icon(Icons.settings), color: Colors.white,),
           ],
-          bottom: const TabBar(
+          bottom: 
+          PreferredSize(
+            preferredSize: Size.fromHeight(58.0), 
+            child: TabBar(
             labelColor: Colors.white,
             dividerColor: Colors.white,
             unselectedLabelColor: Colors.white54,
             indicatorColor: Colors.white,
             tabs: [Tab(child: Text('Mon')),Tab(child: Text('Tue')),Tab(child: Text('Wed')),Tab(child: Text('Thu')),Tab(child: Text('Fri'))],
-          ),),
+          ),),),
           body: const TabBarView(children: [
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
