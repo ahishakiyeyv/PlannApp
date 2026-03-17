@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:plannapp/features/schedule/schedule_screen.dart';
 import 'package:plannapp/features/splash/splash_screen.dart';
+
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -520,55 +520,6 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ],
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        elevation: 3.0,
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home',),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.calendar_today),
-            label: 'Schedule',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.assignment),
-            label: 'Assignments',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
-          ),
-        ],
-        currentIndex: 0,
-        selectedItemColor: Color(0xff256ACC),
-        unselectedItemColor: Colors.grey,
-        onTap: (index) {
-          // Handle navigation logic here
-          if (index == 0) {
-            // Navigate to HomeScreen
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => const HomeScreen()),
-            );
-          } else if (index == 1) {
-            // Navigate to ScheduleScreen
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => const ScheduleScreen()),
-            );
-          } else if (index == 2) {
-            // Navigate to AssignmentsScreen
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => const HomeScreen()),
-            );
-          } else if (index == 3) {
-            // Navigate to SettingsScreen
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => const HomeScreen()),
-            );
-          }
-        },
       ),
     );
   }
