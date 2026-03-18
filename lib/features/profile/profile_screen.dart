@@ -13,6 +13,68 @@ class ProfileScreen extends StatelessWidget {
           IconButton(onPressed: (){print('clicked on settings');}, icon: Icon(Icons.settings), color: Colors.white,),
         ],
       ),
+      body: Container(
+        alignment: Alignment.center,
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              CircleAvatar(
+                radius: 60,
+                //backgroundImage: NetworkImage('https://example.com/profile_picture.jpg'),
+              ),
+              SizedBox(height: 4.0),
+              Text('Alex Johnson', style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.w600),),
+              SizedBox(height: 2.0),
+              Text('alex.johnson@gmail.com', style: TextStyle(color: Colors.lightBlue)),
+              SizedBox(height: 48.0),
+              Row(
+                children: [
+                  Icon( Icons.assignment, color: Colors.grey),
+                  SizedBox(width: 8.0),
+                  Text('Student ID: 12345678', style: TextStyle(fontSize: 16.0, color: Colors.grey),),
+                ],
+              ),
+              Divider(height: 32.0, thickness: 1.0),
+              Row(
+                children: [
+                  Icon( Icons.school_outlined, color: Colors.grey),
+                  SizedBox(width: 8.0),
+                  Text('Department: Computer Science', style: TextStyle(fontSize: 16.0, color: Colors.grey),),
+                ],
+              ),
+              Divider(height: 32.0, thickness: 1.0),
+              Row(
+                children: [
+                  Icon( Icons.calendar_today, color: Colors.grey),
+                  SizedBox(width: 8.0),
+                  Text('Enrollment Year: 2020', style: TextStyle(fontSize: 16.0, color: Colors.grey),),
+                ],
+              ),
+              Divider(height: 32.0, thickness: 1.0),
+              Row(
+                children: [
+                  Icon( Icons.location_on_outlined, color: Colors.grey),
+                  SizedBox(width: 8.0),
+                  Text('Location: New York, USA', style: TextStyle(fontSize: 16.0, color: Colors.grey),),
+                ],
+              ),
+              Divider(height: 32.0, thickness: 1.0),
+              SizedBox(height: 24.0),
+              ElevatedButton(
+                onPressed: (){print('clicked on edit profile');},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color(0xFF256acc),
+                  padding: EdgeInsets.symmetric(horizontal: 32.0, vertical: 12.0),
+                ),
+                child: Text('Edit Profile', style: TextStyle(fontSize: 16.0, color: Colors.white),),
+              ),
+            ],
+          
+          ),
+        ),
+      ),
+      
     );
   }
 }
