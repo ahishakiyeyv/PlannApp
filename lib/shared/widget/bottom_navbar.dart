@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
@@ -17,23 +18,24 @@ class CustomBottomNavBar extends StatelessWidget {
       onDestinationSelected: onItemTapped,
       destinations: [
         NavigationDestination(
-          icon: Icon(Icons.home_max_outlined),
+          icon: Icon(CupertinoIcons.home),
           label: 'Home',
-          selectedIcon: Icon(Icons.home_max),
+          selectedIcon: Icon(CupertinoIcons.home),
         ),
         NavigationDestination(
-          icon: Icon(Icons.calendar_month_outlined),
+          icon: Icon(CupertinoIcons.calendar),
           label: 'Schedule',
+          selectedIcon: Icon(CupertinoIcons.calendar_today),
         ),
         NavigationDestination(
-          icon: Icon(Icons.assignment_outlined),
+          icon: Icon(CupertinoIcons.book),
           label: 'Assignment',
-          selectedIcon: Icon(Icons.assignment),
+          selectedIcon: Icon(CupertinoIcons.book_solid),
         ),
         NavigationDestination(
-            icon: Icon(Icons.person_outline),
+            icon: Icon(CupertinoIcons.person),
             label: 'Profile',
-            selectedIcon: Icon(Icons.person),
+            selectedIcon: Icon(CupertinoIcons.person_solid),
           ),
       ],
     );

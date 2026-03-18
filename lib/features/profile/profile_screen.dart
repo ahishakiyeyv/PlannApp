@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -21,7 +22,8 @@ class ProfileScreen extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: 60,
-                //backgroundImage: NetworkImage('https://example.com/profile_picture.jpg'),
+                backgroundImage: AssetImage('assets/images/avatar.png'),
+                backgroundColor: Colors.transparent,
               ),
               SizedBox(height: 4.0),
               Text('Alex Johnson', style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.w600),),
@@ -30,7 +32,7 @@ class ProfileScreen extends StatelessWidget {
               SizedBox(height: 48.0),
               Row(
                 children: [
-                  Icon( Icons.assignment, color: Colors.grey),
+                  Icon( CupertinoIcons.creditcard, color: Colors.grey),
                   SizedBox(width: 8.0),
                   Text('Student ID: 12345678', style: TextStyle(fontSize: 16.0, color: Colors.grey),),
                 ],
@@ -46,7 +48,7 @@ class ProfileScreen extends StatelessWidget {
               Divider(height: 32.0, thickness: 1.0),
               Row(
                 children: [
-                  Icon( Icons.calendar_today, color: Colors.grey),
+                  Icon( CupertinoIcons.calendar_today, color: Colors.grey),
                   SizedBox(width: 8.0),
                   Text('Enrollment Year: 2020', style: TextStyle(fontSize: 16.0, color: Colors.grey),),
                 ],
@@ -54,7 +56,7 @@ class ProfileScreen extends StatelessWidget {
               Divider(height: 32.0, thickness: 1.0),
               Row(
                 children: [
-                  Icon( Icons.location_on_outlined, color: Colors.grey),
+                  Icon( CupertinoIcons.pin, color: Colors.grey),
                   SizedBox(width: 8.0),
                   Text('Location: New York, USA', style: TextStyle(fontSize: 16.0, color: Colors.grey),),
                 ],
@@ -67,7 +69,14 @@ class ProfileScreen extends StatelessWidget {
                   backgroundColor: Color(0xFF256acc),
                   padding: EdgeInsets.symmetric(horizontal: 32.0, vertical: 12.0),
                 ),
-                child: Text('Edit Profile', style: TextStyle(fontSize: 16.0, color: Colors.white),),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(CupertinoIcons.pencil, color: Colors.white),
+                    SizedBox(width: 8.0),
+                    Text('Edit Profile', style: TextStyle(fontSize: 16.0, color: Colors.white),),
+                  ],
+                ),
               ),
             ],
           

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:plannapp/features/splash/splash_screen.dart';
 
@@ -23,13 +24,12 @@ class _HomeScreenState extends State<HomeScreen> {
           title,
           style: TextStyle(
             color: Colors.white,
-            fontSize: 18,
             fontWeight: FontWeight.bold,
           ),
         ),
         actions: [
           IconButton(
-            icon: Icon(Icons.notifications, color: Colors.white),
+            icon: Icon(CupertinoIcons.bell, color: Colors.white),
             onPressed: () {
               ScaffoldMessenger.of(
                 context,
@@ -37,6 +37,17 @@ class _HomeScreenState extends State<HomeScreen> {
             },
           ),
         ],
+        bottom: PreferredSize(
+          preferredSize: Size.fromHeight(64.0),
+          child: Container(
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: const EdgeInsets.only(left:8.0,bottom:16.0),
+              child: Text('Good Morning, Student!', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500, color: Colors.white),),
+            ),
+          ),
+        
+        )
       ),
 
       body: SingleChildScrollView(
@@ -51,11 +62,6 @@ class _HomeScreenState extends State<HomeScreen> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'Good Morning, Student!',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-            ),
-            SizedBox(height: 16.0),
             Text(
               "Today's Classes",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
