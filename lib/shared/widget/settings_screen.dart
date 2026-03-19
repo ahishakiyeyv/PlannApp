@@ -9,7 +9,7 @@ class SettingsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(onPressed: () {}, icon: Icon(CupertinoIcons.back)),
-        title: Text('Settings'),
+        title: Text('Settings', style: TextStyle(fontWeight: FontWeight.w700)),
       ),
     );
   }
