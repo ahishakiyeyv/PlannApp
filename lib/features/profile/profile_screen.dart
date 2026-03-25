@@ -59,7 +59,7 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              Divider(height: 32.0, thickness: 1.0),
+              Divider(height: 32.0, thickness: 0.5),
               Row(
                 children: [
                   Icon(Icons.school_outlined, color: Colors.grey),
@@ -70,7 +70,7 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              Divider(height: 32.0, thickness: 1.0),
+              Divider(height: 32.0, thickness: 0.5),
               Row(
                 children: [
                   Icon(CupertinoIcons.calendar_today, color: Colors.grey),
@@ -81,7 +81,7 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              Divider(height: 32.0, thickness: 1.0),
+              Divider(height: 32.0, thickness: 0.5),
               Row(
                 children: [
                   Icon(CupertinoIcons.pin, color: Colors.grey),
@@ -92,7 +92,7 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              Divider(height: 32.0, thickness: 1.0),
+              Divider(height: 32.0, thickness: 0.5),
               SizedBox(height: 24.0),
               ElevatedButton(
                 onPressed: () {

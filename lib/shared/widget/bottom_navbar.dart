@@ -9,7 +9,7 @@ class CustomBottomNavBar extends StatelessWidget {
     Key? key,
     required this.selectedIndex,
     required this.onItemTapped,
-  }):super(key:key);
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +18,9 @@ class CustomBottomNavBar extends StatelessWidget {
       onDestinationSelected: onItemTapped,
       destinations: [
         NavigationDestination(
-          icon: Icon(CupertinoIcons.home),
+          icon: Icon(CupertinoIcons.house),
           label: 'Home',
-          selectedIcon: Icon(CupertinoIcons.home),
+          selectedIcon: Icon(CupertinoIcons.house_fill),
         ),
         NavigationDestination(
           icon: Icon(CupertinoIcons.calendar),
@@ -33,10 +33,10 @@ class CustomBottomNavBar extends StatelessWidget {
           selectedIcon: Icon(CupertinoIcons.book_solid),
         ),
         NavigationDestination(
-            icon: Icon(CupertinoIcons.person),
-            label: 'Profile',
-            selectedIcon: Icon(CupertinoIcons.person_solid),
-          ),
+          icon: Icon(CupertinoIcons.person),
+          label: 'Profile',
+          selectedIcon: Icon(CupertinoIcons.person_solid),
+        ),
       ],
     );
   }
