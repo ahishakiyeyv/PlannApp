@@ -24,7 +24,10 @@ class ScheduleScreen extends StatelessWidget {
             actions: [
               IconButton(
                 onPressed: () {
-                  MaterialPageRoute(builder: (context) => SettingsScreen());
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SettingsScreen()),
+                  );
                 },
                 icon: Icon(CupertinoIcons.settings),
                 color: Colors.white,
